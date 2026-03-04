@@ -1,9 +1,9 @@
-##Local RAG Legal Assistant
+# Local RAG Legal Assistant
 
 A Retrieval-Augmented Generation (RAG) system that answers questions about legal documents locally using Flan-T5-Base and SentenceTransformers.
 No OpenAI API keys are required — fully self-contained and CPU-friendly.
 
-Features
+## Features
 
 Upload legal documents (.txt) and index them for semantic search.
 
@@ -15,7 +15,7 @@ Handles long documents using chunking with overlap.
 
 FastAPI server exposes simple endpoints for uploading and querying documents.
 
-Tech Stack
+## Tech Stack
 
 Python 3.11+
 
@@ -31,15 +31,20 @@ PyTorch – model inference
 
 Python-multipart – file upload handling
 
-Installation
+## Installation
 git clone <your_repo_url>
+
 cd legal-rag-local
+
 python -m venv venv
+
 source venv/bin/activate   # Linux/Mac
+
 venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
-Usage
+
+# Usage
 1️⃣ Run the FastAPI server
 uvicorn app:app --reload
 
@@ -47,7 +52,7 @@ The API will run at http://127.0.0.1:8000
 
 2️⃣ Upload a legal document
 
-Endpoint: POST /upload
+## Endpoint: POST /upload
 
 Example with curl:
 
@@ -71,15 +76,22 @@ Response:
 {
   "answer": "The contract is valid from January 1, 2026, for a period of two years. Either party can terminate it with 30 days notice, and any extensions must be agreed in writing."
 }
-Project Structure
+
+# Project Structure
 legal-rag-local/
 │
+
 ├── app.py             # FastAPI server
+
 ├── rag.py             # RAG logic: chunking, embeddings, retrieval, generation
+
 ├── requirements.txt   # Python dependencies
+
 ├── sample_contract.txt # Sample legal document for demo
+
 └── README.md
-How It Works
+
+# How It Works
 
 Document Upload & Indexing
 
