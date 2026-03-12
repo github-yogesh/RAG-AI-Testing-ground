@@ -1,6 +1,6 @@
-# Local RAG Legal Assistant
+# Local RAG Assistant
 
-A Retrieval-Augmented Generation (RAG) system that answers questions about legal documents locally using Flan-T5-Base and SentenceTransformers.
+A Retrieval-Augmented Generation (RAG) system that answers questions about documents locally using Flan-T5-Base and SentenceTransformers.
 No OpenAI API keys are required — fully self-contained and CPU-friendly.
 
 ## Features
